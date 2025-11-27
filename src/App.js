@@ -1,19 +1,19 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import UsersPage from './components/users/usersPage';
-import ProductsPage from './components/products/productsPage';
-import Dashboard from './components/Dashboard/Dashboard';
-import Layout from './components/Layout/Layout';
+import { BrowserRouter } from 'react-router-dom';
+import AppRoutes from './Routes';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Layout>
+    <BrowserRouter basename="/">
+      {/* <Layout>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/users" element={<UsersPage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
         </Routes>
-      </Layout>
+      </Layout> */}
+      <AppRoutes />
     </BrowserRouter>
   );
 };

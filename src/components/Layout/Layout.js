@@ -2,8 +2,9 @@ import { Box } from '@mui/material';
 import Header from '../Header/Header';
 import Sidebar from '../sidebar/sidebar';
 import { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 
-const Layout = ({ children }) => {
+const Layout = ({}) => {
   const [open, setOpen] = useState(true);
 
   const handleToggle = () => setOpen(!open);
@@ -22,7 +23,7 @@ const Layout = ({ children }) => {
             bgcolor: '#f5f6fa',
             overflowY: 'auto',
           }}>
-          {children}
+          <Outlet />
         </Box>
       </Box>
     </Box>
